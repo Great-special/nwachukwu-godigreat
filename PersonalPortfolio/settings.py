@@ -27,9 +27,9 @@ SECRET_KEY = SECRETS
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['godisgreat.nwachukwu.up.railway.app',]
+ALLOWED_HOSTS = ['godisgreat-nwachukwu.up.railway.app',]
 
-CSRF_TRUSTED_ORIGINS = ['https://godisgreat.nwachukwu.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://godisgreat-nwachukwu.up.railway.app']
 
 
 # Application definition
