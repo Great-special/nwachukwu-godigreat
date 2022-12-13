@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %} About {% endblock %}
+
+{% block about %} current {% endblock %}
+{% load static %}
+
+{% block body %}
+<div class="waxon_tm_about" id="about">
+    <div class="container">
+        <div class="about_inner">
+            <div class="left">
+                <img class="thumbnail" src="{% static 'img/gig_about.jpg' %}" alt="" /> 
+            </div>
+            <div class="right">
+                <div class="name">
+                    <h3> {{p_detail}} <span class="bg">About</span></h3>
+                    <span class="job">{{p_detail.job_title}}</span>
+                    {% comment %} <span class="job">Creative Web &amp; App Developer</span> {% endcomment %}
+                </div>
+                <div class="text">
+                    {{p_detail.info|safe}}
+                </div>
+                <div> 
+                    <a class="btn btn-outline-danger" href="{{p_detail.cv.url}}" download="{{p_detail.cv.url}}">
+                        <span>Download CV</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="waxon_tm_service">
+    <div class="container">
+        <div class="service_inner">
+            <ul class="owl-carousel">
+                {% for service in services %}
+                <li class="item">
+                    <div class="list_inner">
+                        <img class="svg" src={{service.image.url}} alt="" />
+                        <div class="details">
+                            <h3>{{service.name}}</h3>
+                            <p>{{service.description}}</p>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

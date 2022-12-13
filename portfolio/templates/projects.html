@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %} Projects {% endblock %}
+
+{% block projects %} current {% endblock %}
+
+{% load static %}
+
+{% block body %}
+
+<div class="waxon_tm_portoflio" id="portfolio">
+    <div class="container">
+        <div class="waxon_tm_main_title">
+            <div class="title">
+                <h3>Featured Works<span class="bg">Projects</span></h3>
+            </div>
+            {% comment %} <div class="portfolio_filter">
+                <ul>
+                    <li>
+                    <a href="#" class="current" data-filter="*">
+                    <span class="first">All</span>
+                    <span class="second">All</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#" data-filter=".vimeo">
+                    <span class="first">Vimeo</span>
+                    <span class="second">Vimeo</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#" data-filter=".youtube">
+                    <span class="first">Youtube</span>
+                    <span class="second">Youtube</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#" data-filter=".soundcloud">
+                    <span class="first">Soundcloud</span>
+                    <span class="second">Soundcloud</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#" data-filter=".image">
+                    <span class="first">Image</span>
+                    <span class="second">Image</span>
+                    </a>
+                    </li>
+                </ul>
+                <div class="wrapper">
+                    <a href="#"><span class="trigger"></span></a>
+                </div>
+            </div>  {% endcomment %}
+        </div>
+
+        <div class="portfolio_inner">
+            <ul class="gallery_zoom">
+                {% for project in projects %}
+                    <li class="image">
+                        <div class="list_inner">
+                            <div >
+                                <img src="{{ project.image.url}}" />
+                                <a class="full_link zoom" href={{project.image.url}}></a>
+                            </div>
+                        </div>
+                        <div class="title">
+                            <h3><a href={{project.project_link}}>{{project.name}}</a></h3>
+                            <span><p>{{project.description}}</p></span>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

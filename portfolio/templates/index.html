@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block index %} current {% endblock %}
+
+{% block body %}
+
+<div class="waxon_tm_preloader">
+    <div class="spinner_wrap">
+        <div class="spinner"></div>
+    </div>
+</div>
+
+<div class="waxon_tm_hero" id="home">
+    <div class="background">
+        <div class="leftpart"></div>
+        <div class="rightpart">
+            <div class="inner">
+                {% comment %} <div class="image"><img src="{{p_detail.cover_image.url}}"></div> {% endcomment %}
+                <div class="image" data-img-url={{p_detail.cover_image.url}}></div>
+                <div class="overlay_image"></div>
+                <div class="myOverlay"></div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="content_inner">
+                <div class="name"> 
+                    <h3 class="stroke">{{p_detail.surname}}</h3>
+                    <h3>{{p_detail.name}}</h3>
+                    <span> {{p_detail.job_title}}</span>
+                    {% comment %} <span>Creative Web &amp; App Developer</span> {% endcomment %}
+                </div>
+            </div>
+            <div class="waxon_tm_down" data-skin="dark" data-position="">  
+                <div class="line_wrapper">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
