@@ -25,10 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = SECRETS
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['godisgreat-nwachukwu.up.railway.app',]
-
+ALLOWED_HOSTS = ['godisgreat-nwachukwu.up.railway.app', '127.0.0.1']
 CSRF_TRUSTED_ORIGINS = ['https://godisgreat-nwachukwu.up.railway.app']
 
 
@@ -40,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-     "whitenoise.runserver_nostatic",
+    "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
     'ckeditor',
     'crispy_forms',
