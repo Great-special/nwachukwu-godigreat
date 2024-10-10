@@ -27,7 +27,7 @@ SECRET_KEY = SECRETS
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['godisgreat-nwachukwu.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['godisgreat-nwachukwu.up.railway.app', '127.0.0.1', '3zk-devoted-geiger.circumeo-apps.net']
 CSRF_TRUSTED_ORIGINS = ['https://godisgreat-nwachukwu.up.railway.app']
 
 
